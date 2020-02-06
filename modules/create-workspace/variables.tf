@@ -1,4 +1,4 @@
--variable workspace_name {
+variable workspace_name {
     type = string
 }
 variable working_directory {
@@ -17,7 +17,7 @@ variable org_name {
   
 }
 variable terraform_version {
-    default = "0.12.8"
+    default = "0.12.20"
 }
 
 
