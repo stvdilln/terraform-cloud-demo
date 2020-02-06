@@ -18,10 +18,10 @@ module ws-demo2 {
     #new infrastructure you should be in a feature branch.  
     github_branch = "development"
 
-    # Junk Pass through stuff.  Terrafrom doesn't allow modules to 
-    # acess environment variable type data, so the only code that 
-    # can get a secret value is the top level module.  So we pass stuff 
-    # along to what the modules need.
-    #oauth_token_id = var.oauth_token_id
-    #payg_subscription_client_secret = var.payg_subscription_client_secret
+ # Junk Pass through stuff.  Terrafrom doesn't allow modules to 
+    # acess variables of the caller, so we need to explicitly
+    # pass these to the module even though they will naver change
+    # betwwen workspaces.
+    oauth_token_id = var.oauth_token_id
+    payg_subscription_client_secret = var.payg_subscription_client_secret
 }
