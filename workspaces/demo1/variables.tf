@@ -1,0 +1,4 @@
+variable testvalues {
+    type = map
+    
+}
