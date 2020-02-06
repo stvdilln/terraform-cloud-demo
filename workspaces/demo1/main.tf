@@ -3,7 +3,7 @@ output secrets {
     value = "${var.testvalues.secret1} ${var.testvalues.secret2}"
 }
 
-resource null_resource nothing {
+resource null_resource nothing2 {
     provisioner "local-exec" {
     command = "echo ${var.testvalues.secret1}"
   }
