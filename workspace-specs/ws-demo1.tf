@@ -5,7 +5,7 @@
 resource tfe_workspace demo1 {
     name = "demo1"
     working_directory = "workspaces/demo1"
-    organization = var.org_name
+    organization = var.organization_name
     terraform_version = var.terraform_version
     queue_all_runs = false
 
