@@ -23,7 +23,7 @@ resource tfe_workspace workspace {
 # I don't want to confuse this demo with that level of 
 # complexity.
 resource tfe_variable ssh_pub_key {
-   key = "ssh_public_key"
+   key = "root_ssh_public_key"
    value = var.root_ssh_public_key
    category = "terraform"
    # A public key should not be secret, the private key is the crown jewel.
@@ -31,7 +31,7 @@ resource tfe_variable ssh_pub_key {
    workspace_id = tfe_workspace.workspace.id
 }
 resource tfe_variable aks_client_secret {
-   key = "aks_client_secret"
+   key = "payg_subscription_client_secret"
    value = var.payg_subscription_client_secret
    category = "terraform"
    # Try to NEver Reveal this in statefiles our output

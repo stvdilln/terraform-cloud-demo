@@ -25,16 +25,16 @@ variable github_repo {
     default = "stvdilln/terraform-cloud-demo"
 }
 variable github_branch {
-    default = "master"
 }
-
-
-
-variable SSH_PUB_KEY {
-    default = "ssh-rsa thisIsTotalJunk11/leKA5/sbqtiuBvEmz9LPNFkOE5crS7pe90Hw8uWOuwwbxCl1KLOxHKoinAMfJEN4gb9088TBTjiJiZ6F/+mwgsxHOJFYI1iSh59AKxuCRAYsEhbSoJiLlndNSDjtUdUhCUrMbvvHKMYyzb1uBPc/bNnVkwpDmm5LNMrQRUvBahFV9ndkqWWAfcJd23EMSMjg8tocaBgS6brIYGKDvXIoF7Sxq5OZVS/9+Mcfq2XwZYfvwkM4m1gKx4/PF7trn3S3iSa1M+jGsFZO1oSpu4kFDfxFNSMx+MteFcW9BWFMY2Hd5CsAlP3jDxjVcBFkVKdZ C6 DevOps"
-}
-
 variable oauth_token_id {
     description = "From the Terraform Cloud Settings"
 }
+
+
+#
+# Secrets that we can pass to child projects
+#
+
+variable root_ssh_public_key {}
 variable payg_subscription_client_secret {}
+variable root_password_all_machines {}
