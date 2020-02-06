@@ -21,7 +21,10 @@ resource tfe_workspace workspace {
 # You would have differnt ssh_pub_keys between dev and prod. 
 # I don't want to confuse this demo with that level of 
 # complexity.
-resource tfe_variable ssh_pub_key {
+# Assuming Vault is present would remove all of this 
+# cruft.  We would just pull a secret file from vault
+# and be done with it.
+resource tfe_variable ssh_pub_key_demo2 {
    key = "root_ssh_public_key"
    value = var.root_ssh_public_key
    category = "terraform"
@@ -29,7 +32,7 @@ resource tfe_variable ssh_pub_key {
    sensitive = false
    workspace_id = tfe_workspace.workspace.id
 }
-resource tfe_variable aks_client_secret {
+resource tfe_variable aks_client_secret_demo2 {
    key = "payg_subscription_client_secret"
    value = var.payg_subscription_client_secret
    category = "terraform"
@@ -37,7 +40,7 @@ resource tfe_variable aks_client_secret {
    sensitive = true
    workspace_id = tfe_workspace.workspace.id
 }
-resource tfe_variable root_password_all_machines {
+resource tfe_variable root_password_all_machines_demo2 {
    key = "root_password_all_machines"
    value = var.root_password_all_machines
    category = "terraform"
