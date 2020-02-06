@@ -14,7 +14,7 @@ variable testvalues {
     type = string
     description = "testing"
 }
-variable test_values {
+variable testvalues {
     type = map
     description = "This is passed down form the master-workspace-creator, it is a map of secrets"
 }
