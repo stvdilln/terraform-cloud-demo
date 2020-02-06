@@ -4,7 +4,7 @@ variable organization_name {
 variable oauth_token_id {
     description = "oauth_token_id:  Got into terraform cloud site, Organization-> Settings-> VCS Providers and provide the Oauth Token ID"
 }
-variable token {
+variable tfe_token {
     description = "Token to Log into Terraform Cloud.  Goto https://app.terraform.io/app/settings/tokens and genrate a token."
 }
 

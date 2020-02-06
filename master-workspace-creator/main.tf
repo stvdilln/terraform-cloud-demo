@@ -30,6 +30,14 @@ resource tfe_variable oauth_token_id {
    sensitive = false
    workspace_id = tfe_workspace.workspace.id
 }
+resource tfe_variable tfe_token {
+   key = "TFE_TOKEN"
+   value = var.tfe_token
+   category = "env"
+   # A public key should not be secret, the private key is the crown jewel.
+   sensitive = true
+   workspace_id = tfe_workspace.workspace.id
+}
 
 
 # Add the secrets that the job creator needs to pass to child jobs
