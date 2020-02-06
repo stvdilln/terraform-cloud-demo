@@ -59,5 +59,5 @@ resource tfe_variable testvalues {
    category = "terraform"
    # Try to NEver Reveal this in statefiles our output
    sensitive = false
-   workspace_id = tfe_workspace.workspace.id
+   workspace_id = tfe_workspace.demo1.id
 }
