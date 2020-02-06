@@ -1,4 +1,4 @@
-resource tfe_workspace workspace {
+resource tfe_workspace demo2 {
     name = "demo2"
     working_directory = "workspaces/demo2"
     organization = var.org_name

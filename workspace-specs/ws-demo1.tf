@@ -2,7 +2,7 @@
 # can run from the GUI in terraform cloud, or will run automatically
 # on submits to the repo
 
-resource tfe_workspace workspace {
+resource tfe_workspace demo1 {
     name = "demo1"
     working_directory = "workspaces/demo1"
     organization = var.org_name
