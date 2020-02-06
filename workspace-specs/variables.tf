@@ -1,4 +1,4 @@
-variable org_name {
+variable organization_name {
     description = "The organization name in Terraform Cloud"
 }
 variable terraform_version {
@@ -9,4 +9,12 @@ variable github_repo {
 }
 variable oauth_token_id {
     description = "From the Terraform Cloud Settings"
+}
+variable testvalues {
+    type = string
+    description = "testing"
+}
+variable test_values {
+    type = map
+    description = "This is passed down form the master-workspace-creator, it is a map of secrets"
 }

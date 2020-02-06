@@ -14,6 +14,23 @@ resource tfe_workspace workspace {
 
     }
 }
+resource tfe_variable organziation_name {
+   key = "organization_name"
+   value = var.organization_name
+   category = "terraform"
+   # A public key should not be secret, the private key is the crown jewel.
+   sensitive = false
+   workspace_id = tfe_workspace.workspace.id
+}
+resource tfe_variable oauth_token_id {
+   key = "oauth_token_id"
+   value = var.oauth_token_id
+   category = "terraform"
+   # A public key should not be secret, the private key is the crown jewel.
+   sensitive = false
+   workspace_id = tfe_workspace.workspace.id
+}
+
 
 # Add the secrets that the job creator needs to pass to child jobs
 
