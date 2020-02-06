@@ -52,6 +52,7 @@ resource tfe_workspace demo1 {
 #    sensitive = true
 #    workspace_id = tfe_workspace.workspace.id
 # }
+
 resource tfe_variable testvalues {
    key = "testvalues"
    hcl = true
