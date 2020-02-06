@@ -10,7 +10,7 @@ resource tfe_workspace workspace {
     vcs_repo  {
         identifier = "stvdilln/terraform-cloud-demo"
         oauth_token_id = var.oauth_token_id
-        branch = "master"
+        branch = "development"
 
     }
 }

@@ -5,7 +5,7 @@
 # Set module name to the same as workspace_name
 module ws-demo1 {
     # This doesn't need to change
-    source = "./modules/create-workspace"
+    source = "../modules/create-workspace"
 
     # account-lifecycle-infra type-name
     workspace_name = "demo1"
