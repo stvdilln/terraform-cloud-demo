@@ -1,6 +1,6 @@
 resource tfe_workspace workspace {
     name = "Master-Workspace-Creator"
-    working_directory = "/"
+    working_directory = "workspace-specs"
     # Do not trigger on specific folders for this job
     file_triggers_enabled = false
     organization = var.organization_name
