@@ -28,33 +28,17 @@ resource tfe_workspace demo1 {
 # Assuming Vault is present would remove all of this 
 # cruft.  We would just pull a secret file from vault
 # and be done with it.
-# resource tfe_variable ssh_pub_key_demo1 {
-#    key = "root_ssh_public_key"
-#    value = var.root_ssh_public_key
-#    category = "terraform"
-#    # A public key should not be secret, the private key is the crown jewel.
-#    sensitive = false
-#    workspace_id = tfe_workspace.workspace.id
-# }
-# resource tfe_variable aks_client_secret_demo1 {
-#    key = "payg_subscription_client_secret"
-#    value = var.payg_subscription_client_secret
-#    category = "terraform"
-#    # Try to NEver Reveal this in statefiles our output
-#    sensitive = true
-#    workspace_id = tfe_workspace.workspace.id
-# }
-# resource tfe_variable root_password_all_machines_demo1 {
-#    key = "root_password_all_machines"
-#    value = var.root_password_all_machines
-#    category = "terraform"
-#    # Try to NEver Reveal this in statefiles our output
-#    sensitive = true
-#    workspace_id = tfe_workspace.workspace.id
-# }
+resource tfe_variable aks_client_secret_demo1 {
+   key = "payg_subscription_client_secret"
+   value = var.payg_subscription_client_secret
+   category = "terraform"
+   # Try to NEver Reveal this in statefiles our output
+   sensitive = true
+   workspace_id = tfe_workspace.workspace.id
+}
 
-resource tfe_variable testvalues {
-   key = "testvalues"
+resource tfe_variable secret_bundle_1 {
+   key = "secret_bundle_1"
    hcl = true
    value = var.testvalues
    category = "terraform"

@@ -1,10 +1,6 @@
-output secrets {
-    # this is not a sensitive item, so just output it
-    value = "${var.testvalues.secret1} ${var.testvalues.secret2}"
-}
 
 resource null_resource nothing2 {
     provisioner "local-exec" {
-    command = "echo ${var.testvalues.secret1}"
+    command = "echo ${var.secret_bundle_1.secret1} ${var_secret_bundle_1.secret2}"
   }
 }
