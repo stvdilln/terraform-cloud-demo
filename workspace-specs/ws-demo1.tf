@@ -32,7 +32,7 @@ resource tfe_variable aks_client_secret_demo1 {
    key = "payg_subscription_client_secret"
    value = var.payg_subscription_client_secret
    category = "terraform"
-   # Try to NEver Reveal this in statefiles our output
+   # Try to Never Reveal this in statefiles our output
    sensitive = true
    workspace_id = tfe_workspace.workspace.id
 }
@@ -40,7 +40,7 @@ resource tfe_variable aks_client_secret_demo1 {
 resource tfe_variable secret_bundle_1 {
    key = "secret_bundle_1"
    hcl = true
-   value = var.testvalues
+   value = var.secret_bundle_1
    category = "terraform"
    # Try to NEver Reveal this in statefiles our output
    sensitive = true
