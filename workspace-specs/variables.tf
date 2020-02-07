@@ -10,7 +10,13 @@ variable github_repo {
 variable oauth_token_id {
     description = "From the Terraform Cloud Settings"
 }
+
+# Secrets avaiable to pass to infidivual workspaces
+
 variable secret_bundle_1 {
     type = string
     description = "This is passed down form the master-workspace-creator, it is a map of secrets"
+}
+variable payg_subscription_client_secret {
+    description = "AKS Client Secret Key"
 }
