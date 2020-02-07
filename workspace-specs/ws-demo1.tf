@@ -12,7 +12,7 @@ resource tfe_workspace demo1 {
     vcs_repo  {
         identifier = var.github_repo
         oauth_token_id = var.oauth_token_id
-        branch = "development"
+        branch = "master"
 
     }
 }
