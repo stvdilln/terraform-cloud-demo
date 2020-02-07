@@ -15,11 +15,3 @@ variable tfe_token {
 variable payg_subscription_client_secret {
     description = "AKS Client Secret Key"
 }
-variable root_password_all_machines {
-    description = "Make it Secure!"
-}
-# Demo- Public key to install onto VMs created for root access
-variable root_ssh_public_key {
-    description = "ssh public key"
-
-}
