@@ -34,7 +34,7 @@ resource tfe_variable aks_client_secret_demo1 {
    category = "terraform"
    # Try to Never Reveal this in statefiles our output
    sensitive = true
-   workspace_id = tfe_workspace.workspace.id
+   workspace_id = tfe_workspace.demo1.id
 }
 
 resource tfe_variable secret_bundle_1 {
